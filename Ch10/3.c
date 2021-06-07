@@ -1,0 +1,46 @@
+#include <stdio.h>
+
+int ac(int count) {
+	int coffee;
+	if (count == 0) {
+		printf("잔이 없습니다.");
+		return 0;
+	}
+	else {
+		printf("남은 잔의 수 : %d\n", count);
+		printf("어떤 커피 드릴까요? (1:보통, 2:설탕, 3:블랙)  ");
+		scanf("%d", &coffee);
+		printf("1. 뜨거운 물을 준비\n");
+		printf("2. 종이컵 준비\n");
+
+		switch (coffee)
+		{
+		case 1:
+			printf("3. 보통 커피를 탄다\n");
+			break;
+		case 2:
+			printf("3. 설탕 커피를 탄다\n");
+			break;
+		case 3:
+			printf("3. 블랙 커피를 탄다\n");
+			break;
+
+		default:
+			printf("3. 아무거나 탄다\n");
+			break;
+
+		}
+		printf("4. 물을 붓는다\n");
+		printf("5. 스푼으로 저어서 녹인다\n");
+		printf("6. ~~님 커피 나왔습니다.\n\n");
+		return a(count - 1);
+	}
+}
+int main03() {
+	int count;
+
+	printf("남은 커피 잔의 수 : ");
+	scanf("%d", &count);
+	ac(count);
+
+}
